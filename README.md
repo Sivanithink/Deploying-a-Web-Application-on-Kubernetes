@@ -1,6 +1,6 @@
 # Deploying-a-Web-Application-on-Kubernetes
 ## step-1 Generate Base64-Encoded Credential
-we encoded our secrets using base64 by running
+we encoded our secrets using base64 by running 
 echo -n 'my-admin-sivanithin-user' | base64
 echo -n 'my-super-secret-sivanithin-password' | base64
 ![image](https://github.com/user-attachments/assets/f502dc68-fdc4-45af-bea0-6ee94d823c87)
