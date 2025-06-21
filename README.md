@@ -1,17 +1,19 @@
 # Deploying-a-Web-Application-on-Kubernetes
-##step-1 Generate Base64-Encoded Credential
+## step-1 Generate Base64-Encoded Credential
 we encoded our secrets using base64 by running
 echo -n 'my-admin-sivanithin-user' | base64
 echo -n 'my-super-secret-sivanithin-password' | base64
 ![image](https://github.com/user-attachments/assets/f502dc68-fdc4-45af-bea0-6ee94d823c87)
-##step-2 Define the Secret in a YAML file
+
+## step-2 Define the Secret in a YAML file
 we generated the encoded credentials for using in Secret.yml file
 the secret allows environment variables in the MongoDB and Mongo-Express containers to pull credentials securely without coding them directly in configuration files
 after creating the file ,we run kubectl apply -f mongo-secret.yaml
 by running this the   Kubernetes will create the secret.yml file
 to check whether it create or not kubectl get secret we run
 kubectl get secret
-##step-3 Step 2: Deploy MongoDB using a Deployment and Service
+
+## step-3 Step 2: Deploy MongoDB using a Deployment and Service
 We define the deployment and internal service in and apply:
 kubectl apply -f mongo-deployment.yaml
 This creates the MongoDB pod and an internal service.
